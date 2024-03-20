@@ -1,0 +1,19 @@
+﻿@model bai3_TH.Models.Product
+<style>
+    body {
+        background-color:darkgrey
+    }</style>
+<h2>Name: @Model.Name</h2>
+ 
+<div>
+    <h3>Price: @Model.Price</h3>
+    <p>Description: @Model.Description</p>
+    
+    @if (!string.IsNullOrEmpty(Model.ImageUrl))
+    {
+        <img src="@Model.ImageUrl" alt="Product Image" style="max-width: 200px;"/>
+    }
+</div>
+ 
+<a asp-action="Index">Back to List</a>
+
